@@ -39,14 +39,24 @@ class Edge {
     }
 
     public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        if (!super.equals(object)) {
+            return false;
+        }
 
         Edge edge = (Edge) object;
 
-        if (eId != edge.eId) return false;
-        if (!adjVertex.equals(edge.adjVertex)) return false;
+        if (eId != edge.eId) {
+            return false;
+        }
+        if (!adjVertex.equals(edge.adjVertex)) {
+            return false;
+        }
 
         return true;
     }
